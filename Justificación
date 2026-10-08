@@ -1,0 +1,12 @@
+UD02CP02
+En este Ejercicio tenemos 3 clases:
+    -VariableCompartida donde definimos un int, su setter, su getter y un método llamado
+    incrementar el cual, como dice su nombre, incrementa el valor cada vez que se le pide.
+    -Hilo que implementa la interfaz Runnable. Donde definimos un for de 1 a 10 y aplicamos
+     el método incrementar.
+    - Por último el Main, donde creamos una instancia de VariableCompartida y dos hilos que
+    usan la misma variable. Les damos a start() para que se inicien los dos hilos.
+Finalmente, observamos el comportamiento y obtenemos que: el valor que esperamos es 20 pero
+no siempre obtenemos esto. Esto se debe a que para incrementar la variable usamos un método
+atómico de varios pasos y el resultado final depende del orden impredecible en que se intercalen
+las operaciones de varios hilos sobre datos compartidos.
